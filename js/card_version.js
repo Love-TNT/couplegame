@@ -8,7 +8,7 @@ window.changeVersion = (card_version) => {
     return
   }
   if (!vip) {
-    alert('会员私密空间')
+    alert('请确认您已满18岁')
     location.href = './about.html'
     return
   }
