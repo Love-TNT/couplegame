@@ -105,7 +105,7 @@ $(function () {
     let vip = localStorage.getItem("vip");
     let length = 10;
     if (vip) {
-        length = 97;
+        length = 100;
         $("#position-count").text(100);
         $("#goabout").hide();
     }
