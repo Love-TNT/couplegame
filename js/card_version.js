@@ -9,7 +9,7 @@ window.changeVersion = (card_version) => {
   }
   if (!vip) {
     alert('请确认您已满18岁')
-    location.href = './about.html'
+    location.href = './18+.html'
     return
   }
 
