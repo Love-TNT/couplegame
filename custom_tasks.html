@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>自定义任务</title>
+  <!-- 引入必要的CSS和JS -->
+</head>
+<body>
+  <h1>自定义任务</h1>
+  <textarea id="task-input" placeholder="输入自定义任务，每行一个"></textarea>
+  <button onclick="addTask()">添加任务</button>
+  <ul id="task-list"></ul>
+
+  <script>
+    // 引入tasks.js中的函数
+    const { addCustomTask, getCustomTasks } = window;
+
+    // 页面加载时显示已有任务
+    window.onload = function() {
+      const tasks = getCustomTasks();
+      tasks.forEach(task => {
+        addTaskToList(task);
+      });
+    };
+
+    // 添加任务到列表
+    function addTask() {
+      const taskInput = document.getElementById('task-input');
+      const task = taskInput.value.trim();
+      if (task) {
+        addCustomTask(task);
+        addTaskToList(task);
+        taskInput.value = '';
+      }
+    }
+
+    // 将任务添加到页面列表
+    function addTaskToList(task) {
+      const list = document.getElementById('task-list');
+      const li = document.createElement('li');
+      li.textContent = task;
+      list.appendChild(li);
+    }
+  </script>
+</body>
+</html>
