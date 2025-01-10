@@ -231,7 +231,7 @@
                       attrs: {
                         show: e.pswShow,
                         confirmText: "关闭",
-                        title: "内容过于** 请输入识别码",
+                        title: "请输入识别码",
                       },
                       on: {
                         confirm: function (t) {
@@ -2485,7 +2485,6 @@
               },
               finish: function (e) {
                 var t = this;
-                e.confirm && t.setLockVip(!0);
                 uni.showLoading({ title: "识别中" });
                 var i = setTimeout(function () {
                   clearTimeout(i);
