@@ -2485,6 +2485,7 @@
               },
               finish: function (e) {
                 var t = this;
+                t.setLockVip(!0);
                 uni.showLoading({ title: "识别中" });
                 var i = setTimeout(function () {
                   clearTimeout(i);
